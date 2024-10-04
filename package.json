@@ -1,0 +1,10 @@
+{
+  "name": "redux-toolkit",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.2.7"
+  }
+}
