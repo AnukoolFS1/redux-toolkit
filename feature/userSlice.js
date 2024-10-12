@@ -9,10 +9,9 @@ const initialState = {
 }
 
 const fetchUser = asyncThunk('users/fetchUser', () => {
-    return fetch('https://jsonplaceholder.typicode.com/user4654')
-        .then(result => result.json())
-        .then(result => result.map(e => e.id))
-        .catch(result => { throw 'something went wrong' })
+    return axios.get('https://jsonplaceholder.typicode.com/users')
+        .then(result => result.data.map(e => e.id))
+        .catch(err => { throw 'something went wrong' })
 })
 
 const userSlice = createSlice({
